@@ -1,0 +1,26 @@
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\bin\Debug\loznica2018.exe.config
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.csprojResolveAssemblyReference.cache
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.Properties.Resources.resources
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.csproj.GenerateResource.Cache
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\bin\Debug\loznica2018.exe
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\bin\Debug\loznica2018.pdb
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.exe
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.pdb
+c:\users\stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.loginForm.resources
+C:\Users\Stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.registerForm.resources
+C:\Users\Stewdžy\documents\visual studio 2012\Projects\loznica2018\loznica2018\obj\Debug\loznica2018.app.resources
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\loznica2018.exe.config
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.exe
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.pdb
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.app.resources
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.loginForm.resources
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.Properties.Resources.resources
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.registerForm.resources
+C:\Users\Tony\Downloads\loznica2018\loznica2018\obj\Debug\loznica2018.csproj.GenerateResource.Cache
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\loznica2018.exe
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\loznica2018.pdb
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\MySql.Data.dll
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\MySql.Data.xml
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tony\Downloads\loznica2018\loznica2018\bin\Debug\Newtonsoft.Json.xml
