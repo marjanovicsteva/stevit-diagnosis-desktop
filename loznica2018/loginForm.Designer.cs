@@ -30,7 +30,7 @@
         {
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
-            this.submitBtn = new System.Windows.Forms.Button();
+            this.SubmitBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -50,15 +50,15 @@
             this.passwordBox.Size = new System.Drawing.Size(160, 20);
             this.passwordBox.TabIndex = 1;
             // 
-            // submitBtn
+            // SubmitBtn
             // 
-            this.submitBtn.Location = new System.Drawing.Point(97, 64);
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(75, 23);
-            this.submitBtn.TabIndex = 2;
-            this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
-            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
+            this.SubmitBtn.Location = new System.Drawing.Point(97, 64);
+            this.SubmitBtn.Name = "SubmitBtn";
+            this.SubmitBtn.Size = new System.Drawing.Size(75, 23);
+            this.SubmitBtn.TabIndex = 2;
+            this.SubmitBtn.Text = "Submit";
+            this.SubmitBtn.UseVisualStyleBackColor = true;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // linkLabel1
             // 
@@ -87,7 +87,7 @@
             this.ClientSize = new System.Drawing.Size(184, 110);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.submitBtn);
+            this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.usernameBox);
             this.Name = "loginForm";
@@ -103,7 +103,7 @@
 
         private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.TextBox passwordBox;
-        private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.Button SubmitBtn;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
     }

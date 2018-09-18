@@ -26,7 +26,7 @@ namespace loznica2018
             InitializeComponent();
         }
 
-        private void submitBtn_Click(object sender, EventArgs e)
+        private void SubmitBtn_Click(object sender, EventArgs e)
         {
             _korisnicko_ime = usernameBox.Text;
             string password = passwordBox.Text;
