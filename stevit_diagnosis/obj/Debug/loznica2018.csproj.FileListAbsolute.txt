@@ -1,0 +1,45 @@
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\bin\Debug\stevit_diagnosis.exe.config
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.csprojResolveAssemblyReference.cache
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.Properties.Resources.resources
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.csproj.GenerateResource.Cache
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\bin\Debug\stevit_diagnosis.exe
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\bin\Debug\stevit_diagnosis.pdb
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.exe
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.pdb
+c:\users\stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.loginForm.resources
+C:\Users\Stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.registerForm.resources
+C:\Users\Stewdžy\documents\visual studio 2012\Projects\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.app.resources
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\stevit_diagnosis.exe.config
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.exe
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.pdb
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.app.resources
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.loginForm.resources
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.Properties.Resources.resources
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.registerForm.resources
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\obj\Debug\stevit_diagnosis.csproj.GenerateResource.Cache
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\stevit_diagnosis.exe
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\stevit_diagnosis.pdb
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\MySql.Data.dll
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\MySql.Data.xml
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tony\Downloads\stevit_diagnosis\stevit_diagnosis\bin\Debug\Newtonsoft.Json.xml
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.csprojAssemblyReference.cache
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.app.resources
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.loginForm.resources
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.Properties.Resources.resources
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.registerForm.resources
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.csproj.GenerateResource.cache
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.csproj.CoreCompileInputs.cache
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.pdb
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\stevit_diagnosis.exe.config
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\stevit_diagnosis.exe
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\stevit_diagnosis.pdb
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\Google.Protobuf.dll
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\MySql.Data.dll
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\Newtonsoft.Json.dll
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\Google.Protobuf.xml
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\MySql.Data.xml
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\bin\Debug\Newtonsoft.Json.xml
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.csproj.CopyComplete
+C:\Users\marja\OneDrive\Documents\Programs\stevit-diagnisis-desktop\stevit_diagnosis\obj\Debug\stevit_diagnosis.exe
