@@ -37,7 +37,7 @@ namespace stevit_diagnosis
                     gender = "female";
                     break;
                 default:
-                    gender = "male";
+                    gender = "undefined";
                     break;
             }
 
@@ -45,7 +45,9 @@ namespace stevit_diagnosis
             if (name.Length < 3)
                 error += "Name cannot be less than 3 characters long.\n";
             if (age.Length != 4 && !IsDigitsOnly(age))
-                error += "Year of birth is invalid.";
+                error += "Year of birth is invalid.\n";
+            if (gender == "undefined")
+                error += "Gender must be specified";
             if (error.Length > 0)
             {
                 MessageBox.Show(

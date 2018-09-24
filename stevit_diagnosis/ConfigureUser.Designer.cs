@@ -61,7 +61,7 @@
             this.label2.Location = new System.Drawing.Point(12, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 13);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Ime";
             // 
             // AgeBox
@@ -69,7 +69,7 @@
             this.AgeBox.Location = new System.Drawing.Point(93, 38);
             this.AgeBox.Name = "AgeBox";
             this.AgeBox.Size = new System.Drawing.Size(106, 20);
-            this.AgeBox.TabIndex = 9;
+            this.AgeBox.TabIndex = 1;
             // 
             // label5
             // 
@@ -77,7 +77,7 @@
             this.label5.Location = new System.Drawing.Point(12, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Godište";
             // 
             // label6
@@ -86,7 +86,7 @@
             this.label6.Location = new System.Drawing.Point(12, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(22, 13);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 7;
             this.label6.Text = "Pol";
             // 
             // GenderBox
@@ -98,14 +98,14 @@
             this.GenderBox.Location = new System.Drawing.Point(93, 64);
             this.GenderBox.Name = "GenderBox";
             this.GenderBox.Size = new System.Drawing.Size(106, 21);
-            this.GenderBox.TabIndex = 13;
+            this.GenderBox.TabIndex = 2;
             // 
             // Cancel
             // 
             this.Cancel.Location = new System.Drawing.Point(130, 91);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(69, 23);
-            this.Cancel.TabIndex = 14;
+            this.Cancel.TabIndex = 4;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -123,6 +123,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.NameBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ConfigureUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

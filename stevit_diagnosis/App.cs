@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Net;
-using System.IO;
 using System.Text;
 using System.Security.Cryptography;
 using System.Collections.Generic;
@@ -14,7 +13,7 @@ namespace stevit_diagnosis
     {
         public string gender = Settings.Default.gender;
         public string age = Settings.Default.age;
-        public string language = "";
+        public string language = Settings.Default.language;
         public string format = "json";
         public string token = "";
 
@@ -45,22 +44,16 @@ namespace stevit_diagnosis
 
         public string Get(string uri)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
-            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
+            var client = new WebClient();
+            var content = client.DownloadData(uri);
+            return Encoding.UTF8.GetString(content);
         }
 
         private void RequestBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                string symptoms = symptomBox.Text;
+                string symptoms = Settings.Default.symptomsIDs;
                 symptoms = "[" + symptoms + "]";
                 string what = "symptoms=" + symptoms + "&gender=" + gender + "&year_of_birth=" + age + "&token=" + token + "&language=" + language;
                 string where = "https://sandbox-healthservice.priaid.ch/diagnosis?";
@@ -73,10 +66,14 @@ namespace stevit_diagnosis
                 string doctor = diagnose.Specialisation[0].Name;
 
                 MessageBox.Show("There is " + accuracy + "% chance that you have " + illness + " and you should go to a doctor specialized in " + doctor + ".", "You have been diagnosed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Settings.Default.symptomsIDs = "";
+                Settings.Default.symptomsNames = "";
+                SymptomBox.Text = Settings.Default.symptomsNames;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                // Implement issue reporting
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -101,6 +98,7 @@ namespace stevit_diagnosis
             this.Languages.DropDownStyle = ComboBoxStyle.DropDownList;
             this.Languages.SelectedIndex = 0;
             language = Languages.SelectedValue.ToString();
+            Settings.Default.language = language;
 
             if (Settings.Default.name == "")
             {
@@ -108,11 +106,8 @@ namespace stevit_diagnosis
                 register.Cancel.Enabled = false;
                 register.ShowDialog();
             }
-            else
-            {
-                UserName.Text = Settings.Default.name;
-                UserName.ReadOnly = true;
-            }
+            UserName.Text = Settings.Default.name;
+            UserName.ReadOnly = true;
         }
 
         private void Configure_Click(object sender, EventArgs e)
@@ -125,6 +120,14 @@ namespace stevit_diagnosis
         private void Languages_SelectedIndexChanged(object sender, EventArgs e)
         {
             language = Languages.SelectedValue.ToString();
+            Settings.Default.language = language;
+        }
+
+        private void AddSymptoms_Click(object sender, EventArgs e)
+        {
+            AddSymptom addSymptom = new AddSymptom();
+            addSymptom.ShowDialog();
+            SymptomBox.Text = Settings.Default.symptomsNames;
         }
     }
 
