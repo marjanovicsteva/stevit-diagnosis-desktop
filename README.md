@@ -1,5 +1,7 @@
 # Stevit Diagnosis - Desktop Edition
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7e93fb75ee914cad877f826275241588)](https://app.codacy.com/app/marjanovicstevan/stevit-diagnisis-desktop?utm_source=github.com&utm_medium=referral&utm_content=marjanovicsteva/stevit-diagnisis-desktop&utm_campaign=Badge_Grade_Settings)
+
 A desktop application that checks given symptoms against Apimedic's Symptom Checker API.
 
 To Do:
