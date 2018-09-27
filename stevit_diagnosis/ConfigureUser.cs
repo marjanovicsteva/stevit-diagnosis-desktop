@@ -11,7 +11,9 @@ namespace stevit_diagnosis
             foreach (char c in str)
             {
                 if (c < '0' || c > '9')
+                {
                     return false;
+                }
             }
 
             return true;
@@ -43,11 +45,17 @@ namespace stevit_diagnosis
 
             string error = "";
             if (name.Length < 3)
+            {
                 error += "Name cannot be less than 3 characters long.\n";
+            }
             if (age.Length != 4 && !IsDigitsOnly(age))
+            {
                 error += "Year of birth is invalid.\n";
+            }
             if (gender == "undefined")
+            {
                 error += "Gender must be specified";
+            }
             if (error.Length > 0)
             {
                 MessageBox.Show(

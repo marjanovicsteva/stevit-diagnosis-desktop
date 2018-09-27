@@ -11,10 +11,10 @@ namespace stevit_diagnosis
 {
     public partial class App : Form
     {
-        public string gender = Settings.Default.gender;
-        public string age = Settings.Default.age;
-        public string language = Settings.Default.language;
-        public string format = "json";
+        private string gender = Settings.Default.gender;
+        private string age = Settings.Default.age;
+        private string language = Settings.Default.language;
+        private string format = "json";
         public string token = "";
 
         public App()
@@ -81,16 +81,16 @@ namespace stevit_diagnosis
         {
             var data = new List<Language>
             {
-                new Language() { Name = "English", Value = "en-gb" },
-                new Language() { Name = "Español", Value = "es-es" },
-                new Language() { Name = "Français", Value = "fr-fr" },
-                new Language() { Name = "Deutsche", Value = "de-ch" },
-                new Language() { Name = "Italiano", Value = "it-it" },
-                new Language() { Name = "عربى", Value = "ar-sa" },
-                new Language() { Name = "Русский", Value = "ru-ru" },
-                new Language() { Name = "Türk", Value = "tr-tr" },
-                new Language() { Name = "Srpski", Value = "sr-sp" },
-                new Language() { Name = "Slovenskí", Value = "sk-sk" }
+                new Language { Name = "English", Value = "en-gb" },
+                new Language { Name = "Español", Value = "es-es" },
+                new Language { Name = "Français", Value = "fr-fr" },
+                new Language { Name = "Deutsche", Value = "de-ch" },
+                new Language { Name = "Italiano", Value = "it-it" },
+                new Language { Name = "عربى", Value = "ar-sa" },
+                new Language { Name = "Русский", Value = "ru-ru" },
+                new Language { Name = "Türk", Value = "tr-tr" },
+                new Language { Name = "Srpski", Value = "sr-sp" },
+                new Language { Name = "Slovenskí", Value = "sk-sk" }
             };
             this.Languages.DataSource = data;
             this.Languages.DisplayMember = "Name";
