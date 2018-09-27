@@ -12,19 +12,19 @@ namespace stevit_diagnosis
 {
     public partial class AddSymptom : Form
     {
-        public string uriParts = "https://sandbox-healthservice.priaid.ch/body/locations";
-        public string uriSymptoms = "https://sandbox-healthservice.priaid.ch/symptoms";
-        public string token;
-        public string language = Settings.Default.language;
-        public string age = Settings.Default.age;
-        public string gender = Settings.Default.gender;
+        private const string uriParts = "https://sandbox-healthservice.priaid.ch/body/locations";
+        private const string uriSymptoms = "https://sandbox-healthservice.priaid.ch/symptoms";
+        private string token;
+        readonly string language = Settings.Default.language;
+        readonly string age = Settings.Default.age;
+        readonly string gender = Settings.Default.gender;
 
         public AddSymptom()
         {
             InitializeComponent();
         }
 
-        bool IsDigitsOnly(string str)
+        static bool IsDigitsOnly(string str)
         {
             foreach (char c in str)
             {
