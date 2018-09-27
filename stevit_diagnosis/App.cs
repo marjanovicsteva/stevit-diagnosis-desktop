@@ -14,7 +14,6 @@ namespace stevit_diagnosis
         private string gender = Settings.Default.gender;
         private string age = Settings.Default.age;
         private string language = Settings.Default.language;
-        private string format = "json";
         public string token = "";
 
         public App()
