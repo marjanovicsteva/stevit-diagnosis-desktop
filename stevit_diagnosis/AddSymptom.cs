@@ -69,7 +69,7 @@ namespace stevit_diagnosis {
             PartBox.DisplayMember = "Name";
             PartBox.ValueMember = "ID";
             PartBox.Enabled = true;
-            PartBox.DropDownStyle = ComboBoxStyle.DropDownList;            
+            PartBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void PartBox_SelectedIndexChanged(object sender, EventArgs e) {
@@ -134,8 +134,7 @@ namespace stevit_diagnosis {
 
             if (Settings.Default.symptomsNames == "") {
                 Settings.Default.symptomsNames += SymptomBox.Text;
-            }
-            else {
+            } else {
                 Settings.Default.symptomsNames += ", " + SymptomBox.Text;
             }
 

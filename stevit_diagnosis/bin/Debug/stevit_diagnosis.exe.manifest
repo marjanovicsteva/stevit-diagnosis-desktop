@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stevit_diagnosis.exe" size="28128">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stevit_diagnosis.exe" size="28640">
       <assemblyIdentity name="stevit_diagnosis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eJ0dQ/O1ygz6KVz24LQ1FWEbLWy4B9/S3F6DCM5g/4I=</dsig:DigestValue>
+        <dsig:DigestValue>SUezfSIHshBK8dv8zZECk/J3j0buIHWWxIfbP7KfGMA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
