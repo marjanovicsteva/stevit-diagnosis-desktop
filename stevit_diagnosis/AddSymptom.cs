@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Net;
 using System.Text;
 using System.Windows.Forms;
@@ -8,48 +7,35 @@ using System.Security.Cryptography;
 using Newtonsoft.Json.Linq;
 using stevit_diagnosis.Properties;
 
-namespace stevit_diagnosis
-{
-    public partial class AddSymptom : Form
-    {
+namespace stevit_diagnosis {
+    public partial class AddSymptom : Form {
         public string uriParts = "https://sandbox-healthservice.priaid.ch/body/locations";
-        public string uriSymptoms = "https://sandbox-healthservice.priaid.ch/symptoms";
-        public string token;
-        public string language = Settings.Default.language;
-        public string age = Settings.Default.age;
+        private string uriSymptoms = "https://sandbox-healthservice.priaid.ch/symptoms";
+        private string token;
+        readonly string language = Settings.Default.language;
+        private string age = Settings.Default.age;
         public string gender = Settings.Default.gender;
 
-        public AddSymptom()
-        {
+        public AddSymptom() {
             InitializeComponent();
         }
 
-        bool IsDigitsOnly(string str)
-        {
-            foreach (char c in str)
-            {
-                if (c < '0' || c > '9')
+        static bool IsDigitsOnly(string str) {
+            foreach (char c in str) {
+                if (c < '0' || c > '9') {
                     return false;
+                }
             }
-
             return true;
         }
 
-        public string Get(string uri)
-        {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
-            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
+        public static string Get(string uri) {
+            var client = new WebClient();
+            var content = client.DownloadData(uri);
+            return Encoding.UTF8.GetString(content);
         }
 
-        private void AddSymptom_Load(object sender, EventArgs e)
-        {
+        private void AddSymptom_Load(object sender, EventArgs e) {
             PartBox.Enabled = false;
             SubpartBox.Enabled = false;
             SymptomBox.Enabled = false;
@@ -58,15 +44,13 @@ namespace stevit_diagnosis
             string secret_key = "s7GWj38Acz2T5Qyp4";
             byte[] secretBytes = Encoding.UTF8.GetBytes(secret_key);
             string computedHashString = "";
-            using (HMACMD5 hmac = new HMACMD5(secretBytes))
-            {
+            using (HMACMD5 hmac = new HMACMD5(secretBytes)) {
                 byte[] dataBytes = Encoding.UTF8.GetBytes(uriToken);
                 byte[] computedHash = hmac.ComputeHash(dataBytes);
                 computedHashString = Convert.ToBase64String(computedHash);
             }
 
-            using (WebClient client = new WebClient())
-            {
+            using (WebClient client = new WebClient()) {
                 client.Headers["Authorization"] = string.Concat("Bearer ", api_key, ":", computedHashString);
                 string responseToken = client.UploadString(uriToken, "POST", "");
                 dynamic json = JObject.Parse(responseToken);
@@ -77,9 +61,8 @@ namespace stevit_diagnosis
             dynamic jsonPartsArray = JArray.Parse(responseParts);
 
             var dataParts = new List<Part>();
-            foreach (dynamic jsonPart in jsonPartsArray)
-            {
-                dataParts.Add(new Part() { ID = jsonPart.ID, Name = jsonPart.Name });
+            foreach (dynamic jsonPart in jsonPartsArray) {
+                dataParts.Add(new Part { ID = jsonPart.ID, Name = jsonPart.Name });
             }
 
             PartBox.DataSource = dataParts;
@@ -89,17 +72,14 @@ namespace stevit_diagnosis
             PartBox.DropDownStyle = ComboBoxStyle.DropDownList;            
         }
 
-        private void PartBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (IsDigitsOnly(PartBox.SelectedValue.ToString()))
-            {
+        private void PartBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if (IsDigitsOnly(PartBox.SelectedValue.ToString())) {
                 string responseSubparts = Get(uriParts + "/" + PartBox.SelectedValue.ToString() + "?token=" + token + "&language=" + language);
                 dynamic jsonSubpartsArray = JArray.Parse(responseSubparts);
 
                 var dataSubparts = new List<Part>();
-                foreach (dynamic jsonSubpart in jsonSubpartsArray)
-                {
-                    dataSubparts.Add(new Part() { ID = jsonSubpart.ID, Name = jsonSubpart.Name });
+                foreach (dynamic jsonSubpart in jsonSubpartsArray) {
+                    dataSubparts.Add(new Part { ID = jsonSubpart.ID, Name = jsonSubpart.Name });
                 }
 
                 SubpartBox.DataSource = dataSubparts;
@@ -112,38 +92,29 @@ namespace stevit_diagnosis
             }
         }
 
-        private void SubpartBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (IsDigitsOnly(SubpartBox.SelectedValue.ToString()))
-            {
+        private void SubpartBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if (IsDigitsOnly(SubpartBox.SelectedValue.ToString())) {
                 string selectorStatus = "man";
                 bool isAdult = DateTime.Now.Year - Int16.Parse(age) > 11;
-                switch (gender)
-                {
-                    case "male":
-                        selectorStatus = (isAdult) ? "man" : "boy";
-                        break;
-                    case "female":
-                        selectorStatus = (isAdult) ? "woman" : "girl";
-                        break;
+                if (gender == "male") {
+                    selectorStatus = (isAdult) ? "man" : "boy";
+                } else {
+                    selectorStatus = (isAdult) ? "woman" : "girl";
                 }
                 string responseSymptoms = Get(uriSymptoms + "/" + SubpartBox.SelectedValue.ToString() + "/" + selectorStatus + "?token=" + token + "&language=" + language);
                 dynamic jsonSymptomsArray = JArray.Parse(responseSymptoms);
 
                 var dataSymptoms = new List<Symptom>();
-                foreach (dynamic jsonSymptom in jsonSymptomsArray)
-                {
+                foreach (dynamic jsonSymptom in jsonSymptomsArray) {
                     bool HasRedFlag = false;
                     string name = jsonSymptom.Name;
-                    if (jsonSymptom.HasRedFlag is JValue jv)
-                    {
+                    if (jsonSymptom.HasRedFlag is JValue jv) {
                         HasRedFlag = (bool)jv.Value;
                     }
-                    if (HasRedFlag)
-                    {
+                    if (HasRedFlag) {
                         name += " (!)";
                     }
-                    dataSymptoms.Add(new Symptom() { ID = jsonSymptom.ID, Name = name });
+                    dataSymptoms.Add(new Symptom { ID = jsonSymptom.ID, Name = name });
                 }
 
                 SymptomBox.DataSource = dataSymptoms;
@@ -154,22 +125,17 @@ namespace stevit_diagnosis
             }
         }
 
-        private void Add_Click(object sender, EventArgs e)
-        {
-            if (Settings.Default.symptomsIDs == "")
-            {
+        private void Add_Click(object sender, EventArgs e) {
+            if (Settings.Default.symptomsIDs == "") {
                 Settings.Default.symptomsIDs += SymptomBox.SelectedValue.ToString();
-            } else
-            {
+            } else {
                 Settings.Default.symptomsIDs += "," + SymptomBox.SelectedValue.ToString();
             }
 
-            if (Settings.Default.symptomsNames == "")
-            {
+            if (Settings.Default.symptomsNames == "") {
                 Settings.Default.symptomsNames += SymptomBox.Text;
             }
-            else
-            {
+            else {
                 Settings.Default.symptomsNames += ", " + SymptomBox.Text;
             }
 
@@ -177,14 +143,12 @@ namespace stevit_diagnosis
         }
     }
 
-    public class Part
-    {
+    public class Part {
         public string ID { get; set; }
         public string Name { get; set; }
     }
 
-    public class Symptom
-    {
+    public class Symptom {
         public string ID { get; set; }
         public string Name { get; set; }
     }
