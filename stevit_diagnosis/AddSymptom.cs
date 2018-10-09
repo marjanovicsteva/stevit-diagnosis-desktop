@@ -126,6 +126,9 @@ namespace stevit_diagnosis {
         }
 
         private void Add_Click(object sender, EventArgs e) {
+            if (SymptomBox.SelectedIndex == -1){
+                return;
+            }
             if (Settings.Default.symptomsIDs == "") {
                 Settings.Default.symptomsIDs += SymptomBox.SelectedValue.ToString();
             } else {
